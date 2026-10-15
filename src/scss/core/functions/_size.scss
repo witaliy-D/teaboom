@@ -1,0 +1,32 @@
+@use "sass:math";
+@use "sass:string";
+//* Функция преобразование базовых чисел в значения rem
+@function size(
+                $value,         //* Значение
+                $basic: 100,    //* Базовое значение
+                $unit: 'rem'    //* Единица измерения
+                ) {
+    @if math.is-unitless($value) {
+        @if $unit == 'rem' {
+            @return (calc($value / $basic)+ rem);
+        }
+        @else if $unit == 'em' {
+            @return (calc($value / $basic) + em);
+        }
+        @else if $unit == 'vw' {
+            @return (($value * 100)/ $basic + vw);
+        }
+        @else if $unit == 'vh' {
+            @return (($value * 100)/ $basic + vh);
+        }
+        @else if $unit == 'number' {
+            @return (calc($value / $basic));
+        }
+        @else if $unit == '%' {
+            @return string.unquote(((calc($value / $basic)) * 100) + "%");
+        }
+    }
+    @else  {
+        @warn '$value - only number size(90)';
+    }
+}

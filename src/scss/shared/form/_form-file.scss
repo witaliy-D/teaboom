@@ -1,0 +1,42 @@
+@use "../../core/mixins/media" as *;
+@use "../../../scss/config/theme" as *;
+
+.form-file {
+  position: relative;
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  line-height: 1;
+
+  &:hover {
+    border: 2px solid $color-primary-hover;
+    background-color: $color-primary-hover;
+  }
+
+  input {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: auto;
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,36 @@
+@use "../../core/mixins/media" as *;
+@use "../../../scss/config/theme" as *;
+@use "../../../scss/config/core" as *;
+
+.form-field {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  &__input {
+    font-family: $font3;
+    color: $font-color;
+    width: 100%;
+    display: block;
+    border: none;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 500;
+    background: #fff;
+    border-radius: 10px;
+    padding: 18px 16px;
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+
+  &__label {
+    font-family: $font-primary;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 15px;
+    color: $font-color;
+    margin-bottom: 8px;
+  }
+}

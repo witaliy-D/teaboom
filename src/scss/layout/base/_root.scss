@@ -1,0 +1,21 @@
+@use "../../config/core";
+@use "../../config/grid";
+@use "../../core/mixins/media";
+
+:root {
+	--scroll-offset: 0px;
+	--adaptive-box: 100%;
+  --columns: #{grid.$columns};
+
+  @each $bp, $value in core.$font-size {
+		@if ($bp == "default") {
+			--body-font-size: #{$value};
+		} @else {
+			@include media.media($bp) {
+				--body-font-size: #{$value};
+			}
+		}
+	}
+}
+
+

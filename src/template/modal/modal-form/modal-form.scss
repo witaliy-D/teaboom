@@ -1,0 +1,139 @@
+@use "../../../scss/core/mixins/media" as *;
+@use "../../../scss/config/core" as *;
+@use "../../../scss/config/theme" as *;
+
+.modal-form {
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 999;
+
+  &__box {
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    transform: perspective(600px) translateY(-120%) rotateX(45deg);
+    transition: all 0.8s ease 0s;
+    background-color: #f6f6f6;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    max-width: 480px;
+    background-image: url("../img/global/footer-decor.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top 130px center;
+  }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+
+    .modal-form__box {
+      transform: perspective(600px) translateY(0%) rotateX(0deg);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: 50px 20px;
+
+    @include media(md) {
+      padding: 85px 24px 64px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    text-transform: none;
+    line-height: 115%;
+
+    @include media(md) {
+      font-size: 30px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 50px;
+    color: rgba($font-color, 0.8);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    row-gap: 24px;
+    margin-bottom: 24px;
+
+    @include media(xs) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .form-textarea {
+    margin-bottom: 24px;
+  }
+
+  &__info {
+    margin-bottom: 24px;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 22px 20px 23px;
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+}
+
+.modal-form__close {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: none;
+  padding: 0;
+  font-size: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 11;
+  transition: transform 0.3s;
+}
+
+.modal-form__close:hover {
+  transform: rotate(180deg);
+
+  &:before,
+  &:after {
+    background-color: $font-color;
+  }
+}
+
+.modal-form__close::before,
+.modal-form__close::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 18px;
+  border-radius: 1px;
+  background-color: $font-color;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transition: 0.3s;
+}
+
+.modal-form__close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-form__close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

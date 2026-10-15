@@ -1,0 +1,129 @@
+@use "../../core/mixins/media" as *;
+@use "../../../scss/config/theme" as *;
+@use "../../../scss/config/core" as *;
+
+.nav-menu {
+
+  @include media(lgx, max) {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items:flex-end;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -105%;
+    height: 100vh;
+    z-index: 899;
+    transition: all 0.3s;
+  }
+
+  &.nav-menu--open {
+    right: 0;
+
+    .nav-menu__inner {
+      transition: all 0.3s;
+      box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__inner {
+    display: flex;
+
+    @include media(lgx, max) {
+      flex-direction: column;
+      width: 100%;
+      max-width: 400px;
+      background-color: $white;
+      height: 100%;
+      overflow: auto;
+      padding: 50px 30px;
+      gap: 50px;
+    }
+
+    @include media(md, max) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include media(xm, max) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &__toggle {
+
+    @include media(lgx) {
+      display: none;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    svg path {
+      fill: $color-primary;
+    }
+
+    @include media(lgx) {
+      display: none;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+
+    @include media(lgx) {
+      display: none;
+    }
+
+    svg path {
+      fill: $text-color;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    column-gap: 16px;
+    row-gap: 10px;
+    text-align: center;
+
+    @include media(lgx) {
+      flex-direction: row;
+    }
+
+    li {
+      display: flex;
+
+      a {
+        font-family: $font-thirdary;
+        font-weight: 500;
+        font-size: 14px;
+        color: $font-color;
+
+        @include media(lgx) {
+          color: #fff;
+        }
+
+        &:not(.active):hover {
+          color: $color-primary-hover;
+        }
+
+        &.active {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "../../config/core";
+
+body {
+    line-height: map.get(core.$global-settings, 'line-height');
+    font-weight: map.get(core.$global-settings, 'font-weight');
+    font-size: var(--body-font-size);
+    font-family: map.get(core.$global-settings, 'font');
+    font-style: normal;
+    margin: 0;
+
+    color: map.get(core.$global-settings, 'color');
+
+    @if (map.get(core.$global-settings, 'bg')) {
+        background-color: map.get(core.$global-settings, 'bg');
+    }
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Продукт</title>
+
+  @@include("../../template/base/favicon.html",{})
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/fancybox.css">
+  <link rel="stylesheet" href="css/slim-select.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body data-scroll-offset>
+  <div class="wrapper">
+    @@include("../../template/header/header-white.html",{})
+    <main class="main">
+      @@include("_include.g.html",{})
+    </main>
+    @@include("../../template/footer/footer.html",{})
+  </div>
+
+  <script src="js/libraries/libraries.js"></script>
+  <script src="js/main/main.js"></script>
+</body>
+
+</html>

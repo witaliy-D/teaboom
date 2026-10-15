@@ -1,0 +1,38 @@
+@use "../../../scss/config/theme" as *;
+@use "../../../scss/config/core" as *;
+
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: $font-primary;
+  font-size: 12px;
+  line-height: 125%;
+
+  li {
+    display: inline;
+
+    a {
+      color: $font-color;
+      position: relative;
+      padding-right: 5px;
+
+      &:hover {
+        color: rgb(204, 102, 0);
+      }
+
+      &::after {
+        content: ">";
+        display: inline-block;
+        font-size: 12px;
+        line-height: 125%;
+        color: #7a7a7a;
+        margin-left: 9px;
+      }
+    }
+
+    span {
+      color: rgb(204, 102, 0);
+    }
+  }
+}

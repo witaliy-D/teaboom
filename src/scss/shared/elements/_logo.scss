@@ -1,0 +1,22 @@
+@use "../../../scss/core/mixins/media" as *;
+@use "../../../scss/config/theme" as *;
+
+.logo {
+  flex-shrink: 0;
+  display: inline-flex;
+
+  svg {
+    flex-shrink: 0;
+
+    path {
+      transition: 0.3s;
+    }
+  }
+
+  &:hover {
+
+    svg path {
+      fill: $color-primary-hover;
+    }
+  }
+}

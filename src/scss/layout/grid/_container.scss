@@ -1,0 +1,45 @@
+@use "sass:list";
+@use "sass:map";
+@use "../../config/grid";
+@use "../../core/mixins/media";
+
+%grid-container-customization {
+    --local-container-gap: var(--container-gap);
+    --dp-block: block;
+    display: var(--dp-block);
+    width: 100%;
+    padding-left:  var(--local-container-gap);
+    padding-right: var(--local-container-gap);
+    margin-left: auto;
+    margin-right: auto;
+}
+%grid-container-value {
+    @each $bp, $value in grid.$container-max-width {
+        @include media.media($bp) {
+            &-#{$bp} {
+                max-width: #{$value};
+            }
+        }
+    }
+}
+.container {
+    @extend %grid-container-customization;
+    @each $bp, $value in grid.$container-max-width {
+        @include media.media($bp) {
+            @extend %grid-container-value-#{$bp};
+        }
+        // @for $i from list.length(map.keys(grid.$container-max-width)) through list.index(map.keys(grid.$container-max-width), $bp){
+        //     @if $bp != 'sm'{
+        //         &\@#{$bp} {
+        //             @extend %grid-container-customization;
+        //             @include media.media(list.nth(map.keys(grid.$container-max-width), $i)) {
+        //                 @extend %grid-container-value-#{list.nth(map.keys(grid.$container-max-width), $i)};
+        //             }
+        //         }
+        //     }
+        // }
+    }
+    &-full {
+        @extend %grid-container-customization;
+    }
+}

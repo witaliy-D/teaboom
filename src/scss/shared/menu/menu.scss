@@ -1,0 +1,84 @@
+@use "../../core/mixins/media" as *;
+@use "../../../scss/config/theme" as *;
+
+.menu {
+  min-height: 1000px;
+  position: relative;
+  overflow: hidden;
+
+  @include media(lg) {
+      display: none;
+    }
+
+  ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    right: 0;
+    transition: right 0.3s;
+    opacity: 1;
+
+
+    @include media(lg) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &.haschild {
+      right: -100%;
+      transition: none;
+    }
+  }
+
+  &__item-parent {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+
+    &>span {
+      width: 20px;
+      height: 20px;
+      background-image: url('../img/global/arrow.svg');
+      background-size: cover;
+      cursor: pointer;
+    }
+
+    div {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      background-color: #fff;
+
+      &>span {
+          display: inline-block;
+          padding-bottom: 30px;
+          cursor: pointer;
+          color: blue;
+        }
+
+      &.open {
+        right: 100%;
+        opacity: 1;
+        transition: right 0.3s 0.3s, opacity 0.3s;
+      }
+
+      &.hide {
+        right: -100%;
+        opacity: 0;
+        transition: opacity 0.3s, right 0.3s 0.3s;
+      }
+    }
+  }
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 0.3s;
+}

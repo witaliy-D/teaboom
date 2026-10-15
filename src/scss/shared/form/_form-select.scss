@@ -1,0 +1,71 @@
+@use "../../core/mixins/media" as *;
+@use "../../../scss/config/theme" as *;
+
+.form-select {
+  display: block;
+  width: 100%;
+  --field-input-color: #fff;
+
+  &:has(.item) {
+    .form-select__label {
+      color: $white;
+    }
+  }
+
+  &:has(.ts-control:hover) {
+    .form-select__label {
+      color: $white;
+    }
+
+    .ts-control input::placeholder {
+      opacity: 1;
+      color: $white;
+    }
+
+    .ts-control input {
+      color: $white;
+    }
+  }
+
+  &:has(.input-active.focus) {
+    .form-select__label {
+      color: $sundance;
+    }
+
+    .ts-control input::placeholder {
+      opacity: 1;
+      color: $white;
+    }
+
+    .ts-control input {
+      color: $white;
+    }
+  }
+
+  .ts-control input {
+    color: var(--field-input-color);
+    display: block;
+    border: none;
+    border-radius: 6px;
+    padding: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    background-color: $rangoon-green;
+    font-size: 16px;
+
+    &::placeholder {
+      opacity: 0.4;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba($white,  0.8);
+    margin-bottom: 8px;
+  }
+}
+
+
+

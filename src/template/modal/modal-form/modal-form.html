@@ -1,0 +1,51 @@
+<div id="modal-form" class="modal modal-form modal--theme-secondary" data-modal="form">
+  <div class="modal__wrapper">
+    <div class="modal__container">
+      <div class="modal__bg-close" data-modal-close=""></div>
+      <div class="modal-form__box">
+        <button class="modal-form__close" data-modal-close=""></button>
+        <div class="modal-form__wrapper">
+
+          <form action="#" id="modalForm" class="form">
+
+            <h2 class="modal-form__title title">Задайте вопрос</h2>
+            <p class="modal-form__subtitle">
+              Оставьте заявку, наши специалисты ответят на все имеющиеся у Вас вопросы
+            </p>
+
+            <div class="modal-form__items">
+              <label class="form-field">
+                <span class="form-field__label">Имя</span>
+                <input class="form-field__input" type="text" placeholder="Введите имя" name="name" required>
+              </label>
+
+              <label class="form-field">
+                <span class="form-field__label">Телефон</span>
+                <input class="form-field__input tel" type="text" placeholder="+7(999)-999-99-99" name="phone" required>
+              </label>
+            </div>
+
+            <label class="form-textarea">
+              <span class="form-textarea__label">Ваш вопрос</span>
+              <textarea class="form-textarea__input" placeholder="Комментарий" name="message"></textarea>
+            </label>
+
+            <div class="modal-form__info">
+              <label class="form-checkbox">
+                <span class="form-checkbox__label">Нажимая кнопку, я даю <a href="#">согласие на обработку моих
+                    персональных
+                    данных</a> в соответствии с <a href="#">Политикой конфиденциальности</a></span>
+                <input class="form-checkbox__input" type="checkbox" name="check" checked>
+              </label>
+            </div>
+
+            <button type="submit" class="modal-form__btn btn btn--theme-primary btn-primary btn-primary--lg">Получить
+              консультацию</button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

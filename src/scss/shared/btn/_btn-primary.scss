@@ -1,0 +1,33 @@
+//@use "../../core/functions/size" as *;
+@use "../../../scss/core/mixins/media" as *;
+@use "../../../scss/config/core" as *;
+
+.btn-primary {
+  --dp-flex: flex;
+  display: var(--dp-flex);
+  align-items: center;
+  justify-content: center;
+  //*
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 1;
+  //text-transform: uppercase;
+  //*
+  border-radius: 100px;
+
+  // &-icon {
+  //   gap: 10px;
+  // }
+
+  &--sm {
+    font-size: 10px;
+  }
+
+  &--md {
+    font-size: 12px;
+  }
+
+  &--lg {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,57 @@
+@use "../../config/theme" as *;
+@use "../../config/core" as *;
+@use "../../../scss/core/mixins/media" as *;
+
+.link {
+  color: currentColor;
+
+  &:not(.link-decor):hover {
+    opacity: 0.5;
+  }
+
+  &-decor {
+    color: currentColor;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      width: 100%;
+      border-bottom: 1px solid currentColor;
+      transform: scaleX(0);
+      transition-duration: $td;
+    }
+    @media (pointer: fine) {
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+  &--line {
+    text-decoration: underline;
+  }
+
+  &-back {
+    display: inline-block;
+    position: relative;
+    font-family: $font-primary;
+    font-size: 12px;
+    line-height: 125%;
+    color: #ff870c;
+
+    &:hover {
+      color: #7a7a7a;
+    }
+
+    &::before {
+      content: "<";
+      display: inline-block;
+      font-size: 12px;
+      line-height: 125%;
+      color: #7a7a7a;
+      margin-right: 5px;
+    }
+  }
+}

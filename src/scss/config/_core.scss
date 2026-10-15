@@ -1,0 +1,37 @@
+@use "theme" as *;
+
+//*
+$font-primary: "Open Sans", sans-serif;
+//$font-secondary: "Inter", sans-serif;
+//$font-thirdary: "Montserrat", sans-serif;
+//$font3: "Lato", sans-serif;
+//* Размеры шрифта
+$font-size:(
+    'default':  14px,
+    //'md':       16px,
+    //'xl':       16px,
+    //'hg':       24px,
+);
+//* Глобальные настройки (body)
+$global-settings:(
+    'font': $font-primary,
+    'line-height': 1.5,
+    'font-weight': 400,
+    'color': #444,
+    'bg': #fbfbfb
+);
+
+//* базавая настройка скорости анимаций
+$td: 400ms;
+
+//* Размеры макета (дизайн макета):
+$layout-size-min: 320;
+$layout-size-max: 1920;
+
+
+
+//* Требуется для работы функции size-clamp, rem
+//* src\scss\core\functions\_size.scss
+//* src\scss\layout\_root.scss
+//?                                                                                               тут
+//* Учавствует в calc(50px + (100 - 50) * ((var(--size-window) - var(--width-window-px)) / (#{$layout-size} - var(--width-window))));

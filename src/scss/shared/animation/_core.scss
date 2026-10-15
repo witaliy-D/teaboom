@@ -1,0 +1,37 @@
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
+@use "../../config/animation";
+@use "../../core/mixins/media";
+
+@mixin animation($name) {
+
+    @if map.get(map.get(animation.$animation, $name), 'active') {
+        
+        @content;
+
+        @if (
+            list.length(map.get(map.get(animation.$animation, $name), 'bp')) == 1 and 
+            list.index(map.get(map.get(animation.$animation, $name), 'bp'), 'default') == 1) {
+            .#{string.unquote($name)}{
+               animation-name: #{string.unquote($name)};
+            }
+        }
+        @else {
+            @each $bp in map.get(map.get(animation.$animation, $name), 'bp'){
+                @if $bp == 'default' {
+                    .#{string.unquote($name)}{
+                        animation-name: #{string.unquote($name)};
+                     }
+                }
+                @else {
+                    .#{string.unquote($name)}\@#{string.unquote($bp)}{
+                        @include media.media($bp, min) {
+                            animation-name: #{string.unquote($name)};
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

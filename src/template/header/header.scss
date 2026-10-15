@@ -1,0 +1,29 @@
+@use "../../scss/core/mixins/media" as *;
+@use "../../scss/config/core" as *;
+@use "../../scss/config/theme" as *;
+
+.header {
+  padding: 40px 0;
+  background: #fefcef;
+
+  &__title {
+    text-align: center;
+    font-size: 30px;
+
+    @include media(md) {
+      font-size: 40px;
+    }
+
+    @include media(lg) {
+      font-size: 50px;
+    }
+
+    @include media(lgx) {
+      font-size: 60px;
+    }
+
+    @include media(xl) {
+      font-size: 70px;
+    }
+  }
+}

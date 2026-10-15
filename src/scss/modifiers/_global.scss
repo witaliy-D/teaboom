@@ -1,0 +1,66 @@
+@use "../../scss/config/theme" as *;
+@use "../../scss/config/core" as *;
+
+// .flex-0-0-a {
+//     flex: 0 0 auto;
+// }
+// .flex-1-0-a {
+//     flex: 1 0 auto;
+// }
+// .w-full {
+//     width: 100%;
+// }
+// .h-full {
+//     height: 100%;
+// }
+// .w-auto {
+//     width: auto;
+// }
+// .h-auto {
+//     height: auto;
+// }
+// .max-w-none {
+//     max-width: none;
+//     @include media(md) {
+//         &\@md {
+//             max-width: none;
+//         }
+//     }
+//     @include media(lg) {
+//         &\@lg {
+//             max-width: none;
+//         }
+//     }
+// }
+
+//.font-secondary {
+//    font-family: $font-secondary;
+//}
+//.lh-auto {
+    //line-height: normal;
+//}
+
+.t\:center {
+  //text-align: center;
+}
+
+.t\:uppercase {
+  //text-transform: uppercase;
+}
+
+.color-primary {
+  //color: $color-primary;
+}
+
+.m\:center-x {
+  //margin-left: auto;
+ // margin-right: auto
+}
+
+.nobr {
+ // white-space: nowrap;
+}
+
+.mail {
+  //font-family: $font-secondary;
+}

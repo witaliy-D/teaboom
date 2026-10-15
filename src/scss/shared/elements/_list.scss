@@ -1,0 +1,17 @@
+@use "../../core/mixins/media" as *;
+
+.list {
+  padding-left: 15px;
+
+  li {
+    color: #151516;
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+
+    &::marker {
+      color: #cd3b31;
+    }
+  }
+}

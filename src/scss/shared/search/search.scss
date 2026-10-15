@@ -1,0 +1,77 @@
+@use "../../../scss/core/mixins/media" as *;
+@use "../../../scss/config/core" as *;
+@use "../../../scss/config/theme" as *;
+
+.search {
+
+  &__form-wrapper {
+    display: none;
+  }
+
+  &.open {
+    .search__form {
+      //display: flex;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @include media(md) {
+      gap: 24px;
+    }
+
+    form {
+      flex-grow: 1;
+    }
+  }
+
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #222;
+    border-radius: 2px;
+    background-color: #fff;
+  }
+
+  &__input {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+    border: 0;
+    color: #222;
+    width: 100%;
+    padding: 17px 16px 18px;
+
+    &::placeholder {
+      color: #858585;
+    }
+  }
+
+  &__submit {
+    flex-shrink: 0;
+    padding: 0;
+    line-height: 0;
+    margin-right: 16px;
+
+    @include media(md) {
+      margin-right: 24px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    line-height: 0;
+  }
+}

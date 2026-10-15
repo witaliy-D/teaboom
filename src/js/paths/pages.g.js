@@ -1,0 +1,1 @@
+import "../../pages/main/product/product.js";

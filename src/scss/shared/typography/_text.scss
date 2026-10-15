@@ -1,0 +1,13 @@
+@use "../../core/mixins/media" as *;
+
+.text {
+  font-size: 16px;
+
+  @include media(lg) {
+    font-size: 18px;
+  }
+
+  @include media(hg) {
+    font-size: 20px;
+  }
+}

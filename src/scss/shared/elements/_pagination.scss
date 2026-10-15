@@ -1,0 +1,93 @@
+@use "../../../scss/config/theme" as *;
+@use "../../config/core" as *;
+@use "../../../scss/core/mixins/media" as *;
+
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  row-gap: 8px;
+  flex-wrap: wrap;
+  font-family: $font-primary;
+
+  li {
+    flex: 0 0 auto;
+
+    a, span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 24px;
+      text-align: center;
+      min-width: 30px;
+      color: $font-color;
+      padding: 3px 2px;
+
+      @include media(xs) {
+        min-width: 40px;
+        padding: 8px 2px;
+      }
+    }
+
+    &.active span {
+      border-radius: 50%;
+      background-color: $color-primary;
+      color: #fff;
+    }
+
+    &.prev {
+      margin-right: 12px;
+    }
+
+    &.next {
+      margin-left: 12px;
+    }
+
+    &.next a,
+    &.prev a {
+      border-radius: 50%;
+      background: #f6f6f6;
+
+      &:hover {
+        background: $color-primary;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+
+        @include media(xs) {
+          width: 24px;
+          height: 24px;
+        }
+
+        path {
+          transition: 0.3s;
+        }
+      }
+    }
+
+    &.disabled {
+      &.next a,
+      &.prev a {
+        opacity: 0.5;
+        cursor: auto;
+        pointer-events: none;
+      }
+    }
+
+    &:not(.disabled) a:hover {
+      color: $color-primary;
+
+      svg path {
+        stroke: #fff;
+      }
+    }
+  }
+}

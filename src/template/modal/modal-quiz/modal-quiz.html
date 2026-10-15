@@ -1,0 +1,272 @@
+<div id="modal-quiz" class="modal modal-quiz modal--theme-secondary" data-modal="quiz">
+    <div class="modal__wrapper">
+        <div class="modal__container">
+            <div class="modal__bg-close" data-modal-close=""></div>
+            <div class=" modal-quiz__box">
+                <div class="modal-quiz__wrapper">
+                    <button class="modal-quiz__close modal__close" data-modal-close="">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M31.4187 10.752C31.5613 10.6096 31.6743 10.4406 31.7516 10.2546C31.8288 10.0685 31.8686 9.86905 31.8687 9.66761C31.8688 9.46617 31.8292 9.26668 31.7523 9.08052C31.6753 8.89437 31.5624 8.7252 31.4201 8.58267C31.2777 8.44014 31.1087 8.32705 30.9226 8.24984C30.7366 8.17264 30.5371 8.13284 30.3357 8.13272C30.1342 8.13259 29.9347 8.17215 29.7486 8.24912C29.5624 8.3261 29.3933 8.43898 29.2507 8.58133L20.0001 17.832L10.7521 8.58133C10.4642 8.29349 10.0738 8.13177 9.66673 8.13177C9.25965 8.13177 8.86924 8.29349 8.5814 8.58133C8.29355 8.86918 8.13184 9.25959 8.13184 9.66667C8.13184 10.0737 8.29355 10.4642 8.5814 10.752L17.8321 20L8.5814 29.248C8.43887 29.3905 8.32581 29.5597 8.24867 29.746C8.17154 29.9322 8.13184 30.1318 8.13184 30.3333C8.13184 30.5349 8.17154 30.7345 8.24867 30.9207C8.32581 31.1069 8.43887 31.2761 8.5814 31.4187C8.86924 31.7065 9.25965 31.8682 9.66673 31.8682C9.86829 31.8682 10.0679 31.8285 10.2541 31.7514C10.4403 31.6743 10.6095 31.5612 10.7521 31.4187L20.0001 22.168L29.2507 31.4187C29.5386 31.7062 29.9288 31.8675 30.3357 31.8673C30.7425 31.867 31.1326 31.7052 31.4201 31.4173C31.7076 31.1295 31.8689 30.7392 31.8687 30.3324C31.8684 29.9256 31.7066 29.5355 31.4187 29.248L22.1681 20L31.4187 10.752Z"
+                                fill="#FF0000" />
+                        </svg>
+                    </button>
+                    <span class="modal-quiz__title-sm">Запись на прием</span>
+
+                    <div class="quiz">
+                        <div class="quiz__inner">
+                            <form class="form  quiz__form" action="#">
+
+                                <div class="quiz__item" style="opacity: 1; z-index: 1; pointer-events: auto;">
+                                    <div class="quiz__item-inner">
+                                        <h3 class="quiz__item-title mb-30">
+                                            Выберите услугу
+                                        </h3>
+
+                                        <div class="form-radio-group">
+
+                                            <label class="form-radio__service">
+                                                <input class="form-radio__input" type="radio" name="service" value="Психологическое консультирование" checked>
+                                                <span class="form-radio__title">Психологическое консультирование</span>
+                                                <span class="form-radio__price"><span class="price-val">7000</span> рублей — 50 минут</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+
+                                            <label class="form-radio__service">
+                                                <input class="form-radio__input" type="radio" name="service" value="Немедицинская психотерапия">
+                                                <span class="form-radio__title">Немедицинская психотерапия</span>
+                                                <span class="form-radio__price"><span class="price-val">7000</span> рублей — 50 минут</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+
+                                            <label class="form-radio__service">
+                                                <input class="form-radio__input" type="radio" name="service" value="Консультирование специалистов">
+                                                <span class="form-radio__title">Консультирование специалистов</span>
+                                                <span class="form-radio__info">В сфере ментального здоровья по вопросам
+                                                    психических расстройств</span>
+                                                <span class="form-radio__price"><span class="price-val">5000</span> рублей — 50 минут</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+
+                                            <label class="form-radio__service">
+                                                <input class="form-radio__input" type="radio" name="service" value="Консультирование пациентов психиатра">
+                                                <span class="form-radio__title">Консультирование пациентов психиатра</span>
+                                                <span class="form-radio__info">И их родственников по вопросам психических
+                                                    расстройств</span>
+                                                <span class="form-radio__price"><span class="price-val">5000</span> рублей — 50 минут</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+
+                                            <label class="form-radio__service">
+                                                <input class="form-radio__input" type="radio" name="service"
+                                                    value="Консультация в рамках «старта проекта психотерапии»">
+                                                <span class="form-radio__title">Консультация в рамках «старта проекта
+                                                    психотерапии»</span>
+                                                <span class="form-radio__price"><span class="price-val">2000</span> рублей — 50 минут</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+
+                                        </div>
+
+
+
+                                        <button type="button" class="btn btn--theme-secondary btn-primary btn-primary--md w-full  btnNext">
+                                            Продолжить
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                                <div class="quiz__item">
+                                    <div class="quiz__item-inner">
+                                        <div class="quiz__item-box">
+                                            <button type="button" class="btn btnPrev">
+                                                <svg width="16" height="40" viewBox="0 0 16 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_55_1474)">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M12.9998 33.3334L-0.333497 20L12.9998 6.66671L16.3332 10L6.33317 20L16.3332 30L12.9998 33.3334Z"
+                                                            fill="#050505" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_55_1474">
+                                                            <rect width="40" height="16" fill="white" transform="translate(0 40) rotate(-90)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+                                            <h3 class="quiz__item-title">
+                                                Выберите Дату и время
+                                            </h3>
+                                        </div>
+
+
+                                        <div class="quiz__date-wrapper">
+                                            <div class="quiz__date-content">
+                                                <input type="text" class="quiz__date" name="date">
+                                            </div>
+                                        </div>
+
+                                        <span class="quiz__time-title">Утро</span>
+
+                                        <div class="form-radio-items">
+                                            <label class="form-radio__time">
+                                                <input class="form-radio__input" type="radio" name="time" value="8:00 - 8:50" checked>
+                                                <span class="form-radio__time-info">8:00 - 8:50</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+                                            <label class="form-radio__time">
+                                                <input class="form-radio__input" type="radio" name="time" value="9:00 - 9:50" disabled>
+                                                <span class="form-radio__time-info">9:00 - 9:50</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+                                            <label class="form-radio__time">
+                                                <input class="form-radio__input" type="radio" name="time" value="10:00 - 10:50">
+                                                <span class="form-radio__time-info">10:00 - 10:50</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+                                            <label class="form-radio__time">
+                                                <input class="form-radio__input" type="radio" name="time" value="11:00 - 11:50">
+                                                <span class="form-radio__time-info">11:00 - 11:50</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+                                        </div>
+
+                                        <span class="quiz__time-title">Обед</span>
+
+                                        <div class="form-radio-items">
+                                            <label class="form-radio__time">
+                                                <input class="form-radio__input" type="radio" name="time" value="12:00 - 12:50">
+                                                <span class="form-radio__time-info">12:00 - 12:50</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+                                            <label class="form-radio__time">
+                                                <input class="form-radio__input" type="radio" name="time" value="13:00 - 13:50">
+                                                <span class="form-radio__time-info">13:00 - 13:50</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+                                            <label class="form-radio__time">
+                                                <input class="form-radio__input" type="radio" name="time" value="14:00 - 14:50">
+                                                <span class="form-radio__time-info">14:00 - 14:50</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+                                            <label class="form-radio__time">
+                                                <input class="form-radio__input" type="radio" name="time" value="15:00 - 15:50">
+                                                <span class="form-radio__time-info">15:00 - 15:50</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+                                            <label class="form-radio__time">
+                                                <input class="form-radio__input" type="radio" name="time" value="16:00 - 16:50">
+                                                <span class="form-radio__time-info">16:00 - 16:50</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+                                        </div>
+
+                                        <span class="quiz__time-title">Вечер</span>
+
+                                        <div class="form-radio-items">
+                                            <label class="form-radio__time">
+                                                <input class="form-radio__input" type="radio" name="time" value="17:00 - 17:50">
+                                                <span class="form-radio__time-info">17:00 - 17:50</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+                                            <label class="form-radio__time">
+                                                <input class="form-radio__input" type="radio" name="time" value="18:00 - 18:50">
+                                                <span class="form-radio__time-info">18:00 - 18:50</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+                                            <label class="form-radio__time">
+                                                <input class="form-radio__input" type="radio" name="time" value="19:00 - 19:50">
+                                                <span class="form-radio__time-info">19:00 - 19:50</span>
+                                                <span class="form-radio__controller"></span>
+                                            </label>
+                                        </div>
+
+                                        <button type="button" class="btn btn--theme-secondary btn-primary btn-primary--md w-full  btnNext mt-16">
+                                            Продолжить
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="quiz__item">
+                                    <div class="quiz__item-inner">
+                                        <div class="quiz__item-box">
+                                            <button type="button" class="btn btnPrev">
+                                                <svg width="16" height="40" viewBox="0 0 16 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_55_1475)">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M12.9998 33.3334L-0.333497 20L12.9998 6.66671L16.3332 10L6.33317 20L16.3332 30L12.9998 33.3334Z"
+                                                            fill="#050505" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_55_1475">
+                                                            <rect width="40" height="16" fill="white" transform="translate(0 40) rotate(-90)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+                                            <h3 class="quiz__item-title">
+                                                Детали записи
+                                            </h3>
+                                        </div>
+
+                                        <div class="quiz__result">
+                                            <div class="quiz__result-item">
+                                                <span class="quiz__result-item-title">Услуги</span>
+                                                <span class="quiz__result-title">Немедицинская психотерапия</span>
+                                            </div>
+                                            <div class="quiz__result-item">
+                                                <span class="quiz__result-item-title">Дата и время</span>
+                                                <span class="quiz__result-date">10 июня </span>
+                                                <span class="quiz__result-time"> 11:00 - 11:50</span>
+                                            </div>
+                                            <div class="quiz__result-item">
+                                                <span class="quiz__result-item-title">Стоимость</span>
+                                                <span class="quiz__result-price"><span>7 000</span> руб.</span>
+                                            </div>
+                                        </div>
+
+                                        <h3 class="quiz__item-title">
+                                            Ваши данные
+                                        </h3>
+
+                                        <div class="form-field">
+                                            <input class="form-field__input" placeholder="Ваше имя" type="text" name="name" required>
+                                        </div>
+
+                                        <div class="form-field">
+                                            <input class="form-field__input" data-mask="+7 (999) 999 99-99" placeholder="+7 (999) 999 99-99" type="tel"
+                                                name="phone" required>
+                                        </div>
+
+                                        <div class="form-textarea">
+                                            <textarea class="form-textarea__input" placeholder="Ваш коментарий" name="comment"></textarea>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary btn--theme-secondary btn-primary--md w-full">
+                                            Записаться на прием
+                                        </button>
+                                        <p class="form-politic">
+                                            Нажимая на кнопку «Записаться на прием», Вы соглашаетесь с
+                                            <a href="#">политикой конфиденциальности</a>
+                                        </p>
+                                    </div>
+
+
+                                </div>
+
+                            </form>
+                            <div id="successModal" style="" class="success" style="display: none">
+                                <h2>Сообщение успешно отправлено</h2>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
